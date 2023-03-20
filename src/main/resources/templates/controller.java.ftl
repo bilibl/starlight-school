@@ -17,7 +17,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.xk.sb.common.constants.Result;
+import cn.lc.starlight.common.constants.Result;
 import ${package.Mapper}.${table.mapperName};
 import ${package.Entity}.${entity};
 

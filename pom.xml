@@ -8,10 +8,10 @@
         <version>2.3.1.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.xk</groupId>
-    <artifactId>sb</artifactId>
+    <groupId>cn.lc</groupId>
+    <artifactId>starlight-school</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>sb</name>
+    <name>starlight-school</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
