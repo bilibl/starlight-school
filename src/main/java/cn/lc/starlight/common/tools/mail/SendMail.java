@@ -1,5 +1,7 @@
 package cn.lc.starlight.common.tools.mail;
 
+import org.springframework.beans.factory.annotation.Value;
+
 import java.io.UnsupportedEncodingException;
 import java.util.Properties;
 
@@ -19,11 +21,14 @@ import javax.mail.internet.MimeMessage;
 public class SendMail extends Thread
 {
 	// 用于给用户发送邮件的邮箱
-	private String from = "2215242978@qq.com";
+	@Value("${spring.mail.username}")
+	private String from;
 	// 邮箱的用户名
-	private String username = "2215242978@qq.com";
+	@Value("${spring.mail.username}")
+	private String username;
 	// 邮箱授权码
-	private String password = "vlreuumoecebdjgg";
+	@Value("${spring.mail.password")
+	private String password;
 	// 发送邮件的服务器地址
 	private String host = "smtp.qq.com";
 
