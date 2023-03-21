@@ -1,5 +1,8 @@
 package cn.lc.starlight.common.tools.mail;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Email
 {
     // 注册邮件
