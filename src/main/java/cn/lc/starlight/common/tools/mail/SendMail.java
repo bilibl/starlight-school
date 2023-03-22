@@ -21,9 +21,9 @@ public class SendMail extends Thread
 	// 用于给用户发送邮件的邮箱
 	private String from = "2215242978@qq.com";
 	// 邮箱的用户名
-	private String username = "2215242978@qq.com";
+	private String username = "2283967450@qq.com";
 	// 邮箱授权码
-	private String password = "vlreuumoecebdjgg";
+	private String password = "caxaiwnqeljeecfa";
 	// 发送邮件的服务器地址
 	private String host = "smtp.qq.com";
 
