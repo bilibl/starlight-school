@@ -8,8 +8,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  *  Mapper 接口 chrimer
  * </p>
  *
- * @author 实训三组
- * @since 2020-06-23
+ * @author l
  */
 public interface TelCodeMapper extends BaseMapper<TelCode> {
 

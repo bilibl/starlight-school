@@ -8,8 +8,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  *  Mapper 接口 chrimer
  * </p>
  *
- * @author cch
- * @since 2020-09-13
+ * @author l
  */
 public interface MessageMapper extends BaseMapper<Message> {
 

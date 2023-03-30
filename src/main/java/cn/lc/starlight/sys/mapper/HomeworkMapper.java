@@ -8,8 +8,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * Mapper 接口 chrimer
  * </p>
  *
- * @author 实训三组
- * @since 2020-07-01
+ * @author l
  */
 public interface HomeworkMapper extends BaseMapper<Homework> {
 
