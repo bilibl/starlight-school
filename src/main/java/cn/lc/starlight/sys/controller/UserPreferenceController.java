@@ -200,7 +200,7 @@ public class UserPreferenceController extends BaseController {
                 try {
                     // 基于物品的推荐
                     ItemBased itemBased = new ItemBased();
-                    List<RecommendedItem> recommendedItemList = itemBased.getRecommendedItemList(String.valueOf(userIdLong), Integer.parseInt(howMany));
+                    List<RecommendedItem> recommendedItemList = itemBased.getRecommendedItemList(String.valueOf(userIdLong), 5);
                     List<Course> courseList = new ArrayList<>();
                     for (RecommendedItem item : recommendedItemList) {
                         // 获取的物品id为long类型，所以根据long_id找到对应的uuid

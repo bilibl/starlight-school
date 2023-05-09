@@ -2,7 +2,6 @@ package cn.lc.starlight.common.constants;
 
 /**
  * 请求返回结果类型
- * Created by bill on 2018/10/30.
  */
 public enum ResultType {
     SUCCESS("200", "操作成功"),

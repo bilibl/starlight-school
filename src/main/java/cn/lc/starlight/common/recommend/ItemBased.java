@@ -11,7 +11,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 /**
- * @author Dover
+ * @author lc
  */
 public class ItemBased {
     public List<RecommendedItem> getRecommendedItemList(String userId, int howMany) throws TasteException, SQLException {

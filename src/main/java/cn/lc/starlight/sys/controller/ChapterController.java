@@ -36,8 +36,6 @@ import cn.lc.starlight.common.tools.BaseController;
  * 前端控制器 chrimer
  * </p>
  *
- * @author 实训三组
- * @since 2020-06-30
  */
 @RestController
 @RequestMapping("/sys/chapter")

@@ -8,9 +8,7 @@ import org.springframework.web.servlet.resource.ResourceHttpRequestHandler;
 import javax.servlet.http.HttpServletRequest;
 import java.nio.file.Path;
 
-/**
- * @author Dover Wong
- */
+
 @Component
 public class NonStaticResourceHttpRequestHandler extends ResourceHttpRequestHandler {
 

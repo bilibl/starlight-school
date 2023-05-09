@@ -13,7 +13,6 @@ import javax.mail.internet.MimeMessage;
  * @ClassName: Sendmail
  * @Description: Sendmail类继承Thread，因此Sendmail就是一个线程类，这个线程类用于给指定的用户发送Email
  *               发送邮件是一件非常耗时的事情，因此这里设计一个线程类来发送邮件
- * @author: hdb
  *
  */
 public class SendMail extends Thread
@@ -23,7 +22,7 @@ public class SendMail extends Thread
 	// 邮箱的用户名
 	private String username = "2283967450@qq.com";
 	// 邮箱授权码
-	private String password = "caxaiwnqeljeecfa";
+	private String password = "rbyirkrdofpveaic";
 	// 发送邮件的服务器地址
 	private String host = "smtp.qq.com";
 
@@ -70,7 +69,6 @@ public class SendMail extends Thread
 	/**
 	 * @Method: createEmail
 	 * @Description: 创建要发送的邮件
-	 * @Anthor:hdb
 	 *
 	 * @param session
 	 * @param email

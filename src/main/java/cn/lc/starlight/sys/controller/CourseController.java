@@ -9,20 +9,17 @@ import cn.lc.starlight.sys.mapper.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import cn.lc.starlight.common.constants.Result;
 
-import org.springframework.web.bind.annotation.RestController;
 import cn.lc.starlight.common.tools.BaseController;
 
 /**
@@ -30,8 +27,6 @@ import cn.lc.starlight.common.tools.BaseController;
  * 前端控制器 chrimer
  * </p>
  *
- * @author 实训三组
- * @since 2020-06-22
  */
 @RestController
 @RequestMapping("/sys/course")
@@ -193,7 +188,7 @@ public class CourseController extends BaseController {
     }
 
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "category_id", paramType = "String", value = "类别id", required = true)
+            @ApiImplicitParam(name = "category_id", paramType = "form", dataType = "String", value = "类别id", required = true)
     })
     @ApiOperation(value = "根据类别获取所有课程信息")
     @RequestMapping(method = RequestMethod.POST, value = "/getCourseByCategory")

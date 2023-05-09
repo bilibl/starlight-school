@@ -19,8 +19,6 @@ import java.util.List;
  * mysql 代码生成器演示例子
  * </p>
  *
- * @author jobob
- * @since 2018-09-12
  */
 public class MysqlGenerator {
 
@@ -65,7 +63,7 @@ public class MysqlGenerator {
         GlobalConfig gc = new GlobalConfig();
         String projectPath = System.getProperty("user.dir");
         gc.setOutputDir(projectPath + "/src/main/java");
-        gc.setAuthor("实训三组");
+        gc.setAuthor("lc");
         gc.setOpen(false);
         gc.setSwagger2(blSwagger);
         mpg.setGlobalConfig(gc);

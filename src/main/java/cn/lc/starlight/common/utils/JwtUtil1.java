@@ -12,7 +12,6 @@ import java.util.Map;
 /**
  * jwt工具类
  *
- * @author zhangmingcheng
  */
 @Configuration
 public class JwtUtil1 {

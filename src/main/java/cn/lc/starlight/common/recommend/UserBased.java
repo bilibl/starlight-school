@@ -11,9 +11,6 @@ import org.apache.mahout.cf.taste.similarity.UserSimilarity;
 import java.sql.SQLException;
 import java.util.List;
 
-/**
- * @author Dover
- */
 public class UserBased {
     public List<RecommendedItem> getRecommendedItemList(String userId, int howMany) throws TasteException, SQLException {
 
