@@ -17,10 +17,8 @@ import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -71,9 +69,8 @@ public class TalkingsController extends BaseController {
         Talkings talking = new Talkings();
 
         //获得时间
-        String date = DateTool.getCurrTime();
-        date = date.substring(0, 4) + "年" + date.substring(4, 6) + "月" + date.substring(6, 8)
-                + "日 " + date.substring(8, 11) + ":" + date.substring(11, 13) + ":" + date.substring(13, 15);
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");
+        String date = simpleDateFormat.format(new Date());
 
         talking.setUserId(userId);
         talking.setCourseId(courseId);
@@ -267,9 +264,8 @@ public class TalkingsController extends BaseController {
         Talkings parentTalking = talkingsMapper.selectOne(talkingsQueryWrapper);
 
         //获得时间
-        String date = DateTool.getCurrTime();
-        date = date.substring(0, 4) + "年" + date.substring(4, 6) + "月" + date.substring(6, 8)
-                + "日 " + date.substring(8, 11) + ":" + date.substring(11, 13) + ":" + date.substring(13, 15);
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");
+        String date = simpleDateFormat.format(new Date());
 
         //讨论表add讨论
         talking.setCourseId(parentTalking.getCourseId());

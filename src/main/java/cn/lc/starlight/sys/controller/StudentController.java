@@ -219,7 +219,7 @@ public class StudentController extends BaseController {
                     String localPath = "";
                     if ("true".equals(typeLocal)) {
                         // 本地路径
-                        localPath = "/src/main/resources/files/homework";
+                        localPath = "F:\\IdeaProjects\\starlight-school\\src\\main\\resources\\files\\homework";
                     } else {
                         // 服务器上的路径
                         localPath = "/home/static/homework";

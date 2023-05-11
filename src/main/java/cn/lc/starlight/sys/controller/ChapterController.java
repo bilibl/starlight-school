@@ -17,10 +17,7 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -137,6 +134,7 @@ public class ChapterController extends BaseController {
             } else {
                 // 附加信息
                 chapterList = addEtc(chapterList);
+                Collections.sort(chapterList, Comparator.comparing(Chapter::getChapter));
                 result.success("获取章节成功");
                 result.setData(chapterList);
             }

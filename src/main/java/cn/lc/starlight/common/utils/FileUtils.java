@@ -1,5 +1,6 @@
 package cn.lc.starlight.common.utils;
 
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;

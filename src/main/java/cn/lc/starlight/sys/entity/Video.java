@@ -11,9 +11,6 @@ import lombok.experimental.Accessors;
  * <p>
  * chrimer
  * </p>
- *
- * @author 实训三组
- * @since 2020-06-29
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
