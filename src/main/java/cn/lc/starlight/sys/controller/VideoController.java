@@ -24,14 +24,7 @@ import cn.lc.starlight.common.constants.Result;
 import org.springframework.web.bind.annotation.RestController;
 import cn.lc.starlight.common.tools.BaseController;
 
-/**
- * <p>
- * 前端控制器 chrimer
- * </p>
- *
- * @author 实训三组
- * @since 2020-06-30
- */
+
 @RestController
 @RequestMapping("/sys/video")
 public class VideoController extends BaseController {

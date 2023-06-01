@@ -31,14 +31,7 @@ import cn.lc.starlight.sys.mapper.ChildCategoryMapper;
 import org.springframework.web.bind.annotation.RestController;
 import cn.lc.starlight.common.tools.BaseController;
 
-/**
- * <p>
- * 前端控制器 chrimer
- * </p>
- *
- * @author 实训三组
- * @since 2020-06-22
- */
+
 @RestController
 @RequestMapping("/sys/child-category")
 public class ChildCategoryController extends BaseController {

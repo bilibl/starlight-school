@@ -21,7 +21,7 @@ public class ItemBased {
 
         // 使用 欧几里得空间距离相似度计算方式
         ItemSimilarity similarity = new EuclideanDistanceSimilarity(dataModel);
-        // 使用 推荐器
+        // 构建推荐器
         GenericItemBasedRecommender recommender = new GenericItemBasedRecommender(dataModel, similarity);
         // 获取用户id为userId的推荐
         List<RecommendedItem> recommendedItemList = recommender.recommend(Long.parseLong(userId), howMany);

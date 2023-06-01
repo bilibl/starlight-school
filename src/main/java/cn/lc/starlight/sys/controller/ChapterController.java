@@ -143,7 +143,7 @@ public class ChapterController extends BaseController {
     }
 
     /**
-     * 附加章节信息etc
+     * 附加章节信息视频内容
      */
     public List<Chapter> addEtc(List<Chapter> chapterList) {
         //etc的内容
