@@ -23,14 +23,7 @@ import cn.lc.starlight.sys.mapper.TeacherMapper;
 import cn.lc.starlight.common.tools.BaseController;
 import org.springframework.web.multipart.MultipartFile;
 
-/**
- * <p>
- * 前端控制器 chrimer
- * </p>
- *
- * @author 实训三组
- * @since 2020-06-22
- */
+
 @RestController
 @RequestMapping("/sys/teacher")
 public class TeacherController extends BaseController {

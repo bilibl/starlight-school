@@ -22,14 +22,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * <p>
- * 前端控制器 chrimer
- * </p>
- *
- * @author 实训三组
- * @since 2020-06-22
- */
+
 @RestController
 @RequestMapping("/sys/student")
 public class StudentController extends BaseController {
@@ -184,73 +177,73 @@ public class StudentController extends BaseController {
         return result;
     }
 
-    @ApiOperation(value = "学生做作业")
-    @ApiImplicitParams({
-            @ApiImplicitParam(name = "file", paramType = "MultipartFile", value = "附件"),
-            @ApiImplicitParam(name = "fileName", paramType = "String", value = "附件名"),
-            @ApiImplicitParam(name = "chapterId", paramType = "String", value = "章节id", required = true),
-            @ApiImplicitParam(name = "studentId", paramType = "String", value = "学生id", required = true)
-    })
-    @RequestMapping(method = RequestMethod.POST, value = "/doHomework")
-    public Result uploadFile(@RequestParam("file") MultipartFile file,
-                             String studentId,
-                             String chapterId) {
-        Result result = new Result();
-
-
-        if (studentId == null) {
-            result.fail("非法的学生id");
-        } else {
-            Student student = new Student();
-            QueryWrapper<Student> studentQueryWrapper = new QueryWrapper<>(student);
-            studentQueryWrapper.eq("id", studentId);
-            student = studentMapper.selectOne(studentQueryWrapper);
-            if (student == null) {
-                result.fail("未找到该学生");
-            } else {
-                Chapter chapter = new Chapter();
-                QueryWrapper<Chapter> chapterQueryWrapper = new QueryWrapper<>(chapter);
-                chapterQueryWrapper.eq("id", chapterId);
-                chapter = chapterMapper.selectOne(chapterQueryWrapper);
-                if (chapter == null) {
-                    result.fail("未找到该章节");
-                } else {
-                    // 上传附件
-                    String localPath = "";
-                    if ("true".equals(typeLocal)) {
-                        // 本地路径
-                        localPath = "F:\\IdeaProjects\\starlight-school\\src\\main\\resources\\files\\homework";
-                    } else {
-                        // 服务器上的路径
-                        localPath = "/home/static/homework";
-                    }
-                    // 获得文件名字
-                    String fileName = file.getOriginalFilename();
-                    logger.info("上传附件中");
-                    String newFileName = FileUtils.upload(file, localPath, fileName);
-                    if (newFileName != null) {
-                        //上传成功
-                        logger.info("上传成功");
-
-                        Homework homework = new Homework();
-                        homework.setChapterId(chapterId);
-                        homework.setStudentId(studentId);
-                        if (fileName != null) {
-                            homework.setSrc(newFileName);
-                        }
-                        homeworkMapper.insert(homework);
-                        result.success("作业提交成功");
-
-                    } else {
-                        // 上传失败
-                        logger.info("上传失败");
-                        result.success("作业提交失败，请检查网络");
-                    }
-                }
-            }
-        }
-        return result;
-    }
+//    @ApiOperation(value = "学生做作业")
+//    @ApiImplicitParams({
+//            @ApiImplicitParam(name = "file", paramType = "MultipartFile", value = "附件"),
+//            @ApiImplicitParam(name = "fileName", paramType = "String", value = "附件名"),
+//            @ApiImplicitParam(name = "chapterId", paramType = "String", value = "章节id", required = true),
+//            @ApiImplicitParam(name = "studentId", paramType = "String", value = "学生id", required = true)
+//    })
+//    @RequestMapping(method = RequestMethod.POST, value = "/doHomework")
+//    public Result uploadFile(@RequestParam("file") MultipartFile file,
+//                             String studentId,
+//                             String chapterId) {
+//        Result result = new Result();
+//
+//
+//        if (studentId == null) {
+//            result.fail("非法的学生id");
+//        } else {
+//            Student student = new Student();
+//            QueryWrapper<Student> studentQueryWrapper = new QueryWrapper<>(student);
+//            studentQueryWrapper.eq("id", studentId);
+//            student = studentMapper.selectOne(studentQueryWrapper);
+//            if (student == null) {
+//                result.fail("未找到该学生");
+//            } else {
+//                Chapter chapter = new Chapter();
+//                QueryWrapper<Chapter> chapterQueryWrapper = new QueryWrapper<>(chapter);
+//                chapterQueryWrapper.eq("id", chapterId);
+//                chapter = chapterMapper.selectOne(chapterQueryWrapper);
+//                if (chapter == null) {
+//                    result.fail("未找到该章节");
+//                } else {
+//                    // 上传附件
+//                    String localPath = "";
+//                    if ("true".equals(typeLocal)) {
+//                        // 本地路径
+//                        localPath = "F:\\IdeaProjects\\starlight-school\\src\\main\\resources\\files\\homework";
+//                    } else {
+//                        // 服务器上的路径
+//                        localPath = "/home/static/homework";
+//                    }
+//                    // 获得文件名字
+//                    String fileName = file.getOriginalFilename();
+//                    logger.info("上传附件中");
+//                    String newFileName = FileUtils.upload(file, localPath, fileName);
+//                    if (newFileName != null) {
+//                        //上传成功
+//                        logger.info("上传成功");
+//
+//                        Homework homework = new Homework();
+//                        homework.setChapterId(chapterId);
+//                        homework.setStudentId(studentId);
+//                        if (fileName != null) {
+//                            homework.setSrc(newFileName);
+//                        }
+//                        homeworkMapper.insert(homework);
+//                        result.success("作业提交成功");
+//
+//                    } else {
+//                        // 上传失败
+//                        logger.info("上传失败");
+//                        result.success("作业提交失败，请检查网络");
+//                    }
+//                }
+//            }
+//        }
+//        return result;
+//    }
 
     @ApiOperation(value = "学生选择兴趣")
     @ApiImplicitParams({

@@ -29,14 +29,7 @@ import cn.lc.starlight.common.constants.Result;
 
 import cn.lc.starlight.common.tools.BaseController;
 
-/**
- * <p>
- * 前端控制器 chrimer
- * </p>
- *
- * @author 实训三组
- * @since 2020-06-19
- */
+
 @RestController
 @RequestMapping("/sys/user")
 public class UserController extends BaseController {

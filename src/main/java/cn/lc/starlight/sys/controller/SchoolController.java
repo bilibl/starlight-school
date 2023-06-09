@@ -21,12 +21,7 @@ import cn.lc.starlight.sys.mapper.SchoolMapper;
 import org.springframework.web.bind.annotation.RestController;
 import cn.lc.starlight.common.tools.BaseController;
 
-/**
- * <p>
- * 前端控制器 chrimer
- * </p>
- *
- */
+
 @RestController
 @RequestMapping("/sys/school")
 public class SchoolController extends BaseController {

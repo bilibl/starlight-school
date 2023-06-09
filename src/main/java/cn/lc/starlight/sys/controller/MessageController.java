@@ -20,14 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.HashMap;
 import java.util.List;
 
-/**
- * <p>
- * 前端控制器 chrimer
- * </p>
- *
- * @author cch
- * @since 2020-09-13
- */
+
 @RestController
 @RequestMapping("/sys/message")
 public class MessageController extends BaseController {

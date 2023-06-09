@@ -21,9 +21,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-/**
- * @author Dover Wong
- */
+
 @RestController
 @AllArgsConstructor
 @RequestMapping("/sys/video")

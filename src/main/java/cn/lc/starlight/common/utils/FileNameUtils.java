@@ -1,7 +1,6 @@
 package cn.lc.starlight.common.utils;
 
 /**
- * @author Dover Wong
  * @description: 生成新的文件名（利用时间戳防止重名）文件前缀名_当前时间.文件扩展名
  */
 

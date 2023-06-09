@@ -6,11 +6,6 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.File;
 import java.io.IOException;
 
-/**
- * @Auther: wyx
- * @Date: 2019-04-08 10:10
- * @Description:
- */
 
 public class FileUtils {
 

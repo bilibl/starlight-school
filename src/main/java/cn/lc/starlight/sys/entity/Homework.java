@@ -7,14 +7,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
-/**
- * <p>
- * chrimer
- * </p>
- *
- * @author 实训三组
- * @since 2020-07-01
- */
+//已弃
 @Data
 @EqualsAndHashCode(callSuper = true)
 @Accessors(chain = true)

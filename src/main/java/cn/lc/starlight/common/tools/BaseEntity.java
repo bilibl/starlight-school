@@ -10,11 +10,7 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * 基础实体类
- * @author bill
- *
- */
+
 @Data
 public class BaseEntity implements Serializable {
 

@@ -25,12 +25,7 @@ import cn.lc.starlight.sys.mapper.EmailCodeMapper;
 import org.springframework.web.bind.annotation.RestController;
 import cn.lc.starlight.common.tools.BaseController;
 
-/**
- * <p>
- * 前端控制器 chrimer
- * </p>
- *
- */
+
 @RestController
 @RequestMapping("/sys/email-code")
 public class EmailCodeController extends BaseController {
